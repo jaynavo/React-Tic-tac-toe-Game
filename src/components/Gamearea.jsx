@@ -86,14 +86,8 @@ const GameArea = () => {
 
          }
 
-         
-         
-
-         
 
          answers_checking()
-
-         pattern_identifying(e)
 
          
 
@@ -130,8 +124,6 @@ const GameArea = () => {
 
       answers_checking()
 
-      pattern_identifying(e)
-
        
 
 
@@ -160,12 +152,8 @@ const GameArea = () => {
             setMoveStatus("Player O Move")
          }
 
-         
-
 
          answers_checking()
-
-         pattern_identifying(e)
 
 
 
@@ -194,9 +182,6 @@ const GameArea = () => {
            console.log(array_x_1)
         }
 
-        
-
-      pattern_identifying(e)
 
       answers_checking()
 
@@ -226,8 +211,6 @@ const GameArea = () => {
             
          }
 
-         pattern_identifying(e)
-
          answers_checking()
 
 
@@ -256,7 +239,6 @@ const GameArea = () => {
            
         }
 
-        pattern_identifying(e)
 
         answers_checking()
 
@@ -283,7 +265,6 @@ const GameArea = () => {
             console.log(array_x_1)
          }
 
-         pattern_identifying(e)
 
          answers_checking()
 
@@ -310,7 +291,6 @@ const GameArea = () => {
            console.log(array_x_1)
         }
 
-        pattern_identifying(e)
         answers_checking()
 
 
@@ -338,54 +318,11 @@ const GameArea = () => {
             console.log(array_x_1)
          }
 
-         pattern_identifying(e)
-
          answers_checking()
 
     }
 
 
-
-    const pattern_identifying = (e) => {
-
-
-
-      if(e.target.value == 1){
-
-        console.log("First Pattern Checking..!!")
-
-      }else if(e.target.value == 2){
-        console.log("Second Pattern Checking..!!")
-
-      }else if(e.target.value == 3){
-         console.log("Third Pattern Checking..!!")
-
-
-      }else if(e.target.value == 4){
-         console.log("Fourth Pattern Checking..!!")
-
-      }else if(e.target.value == 5){
-         console.log("Fifth Pattern Checking..!!")
-         
-      }else if(e.target.value == 6){
-         console.log("Sixth Pattern Checking..!!")
-
-      }else if(e.target.value == 7){
-         console.log("Seventh Pattern Checking..!!")
-
-
-      }else if(e.target.value == 8){
-         console.log("Eight Pattern Checking..!!")
-
-
-      }else if(e.target.value == 9){
-         console.log("Ninth Pattern Checking..!!")
-
-      }else{
-         console.log("Pattern Not found..!!")
-      }
-      
-    }
 
    const answers_checking = () => {
       
