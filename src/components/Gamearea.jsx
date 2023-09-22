@@ -4,8 +4,8 @@ import './Gamearea.css'
 const GameArea = () => {
 
     //game functional areas
-    const [isPlayerX, setPlayerX] = useState(true)
-    const [isPlayerO, setPlayerO] = useState(true)
+    const [isPlayerX, setPlayerX] = useState()
+    const [isPlayerO, setPlayerO] = useState()
     const [PlayerOData, setPlayerOData] = useState("O")
     const [PlayerXData, setPlayerXData] = useState("X")
 
@@ -19,10 +19,12 @@ const GameArea = () => {
 
     const play_target_o = (e) => {
 
+        setPlayerO(true)
+
+        setPlayerX(false)
+
         if(isPlayerO){
             setPlayerOData(e.target.textContent)
-            setPlayerO(false)
-            setPlayerX(true)
         }
 
         
@@ -30,12 +32,12 @@ const GameArea = () => {
 
     const play_target_x = (e) => {
 
+        setPlayerX(true)
+
+        setPlayerO(false)
+
         if(isPlayerX){
-
           setPlayerXData(e.target.textContent)
-          setPlayerX(false)
-          setPlayerO(true)
-
         }
 
         
@@ -59,24 +61,19 @@ const GameArea = () => {
 
          
 
-         if(!isPlayerO){
+         if(isPlayerO){
             e.target.textContent = PlayerOData
             array_x_1[0] = PlayerOData
-
-            //array_x_1.push(PlayerOData)
-            
             setArray_X_1(array_x_1)
             console.log(array_x_1)
             setMoveStatus("Player X Move")
             
             
             
-         }else if(!isPlayerX){
+         }else if(isPlayerX){
             e.target.textContent = PlayerXData
             
             array_x_1[0] = PlayerXData
-            //array_x_1.push(PlayerXData)
-            
             setArray_X_1(array_x_1)
             console.log(array_x_1)
             setMoveStatus("Player O Move")
@@ -101,7 +98,7 @@ const GameArea = () => {
 
         console.log(e.target.value)
 
-        if(!isPlayerO){
+        if(isPlayerO){
            e.target.textContent = PlayerOData
            array_x_1[1] = PlayerOData
            setArray_X_1(array_x_1)
@@ -109,9 +106,7 @@ const GameArea = () => {
            setMoveStatus("Player X Move")
 
            
-           
-           
-        }else if(!isPlayerX){
+        }else if(isPlayerX){
            e.target.textContent = PlayerXData
            array_x_1[1] = PlayerXData
            setArray_X_1(array_x_1)
@@ -136,7 +131,7 @@ const GameArea = () => {
 
          console.log(e.target.value)
 
-         if(!isPlayerO){
+         if(isPlayerO){
             e.target.textContent = PlayerOData
             array_x_1[2] = PlayerOData
             setArray_X_1(array_x_1)
@@ -144,7 +139,7 @@ const GameArea = () => {
             setMoveStatus("Player X Move")
             
             
-         }else if(!isPlayerX){
+         }else if(isPlayerX){
             e.target.textContent = PlayerXData
             array_x_1[2] = PlayerXData
             setArray_X_1(array_x_1)
@@ -166,18 +161,16 @@ const GameArea = () => {
 
         console.log(e.target.value)
 
-        if(!isPlayerO){
+        if(isPlayerO){
            e.target.textContent = PlayerOData
            array_x_1[3] = PlayerOData
-            //array_x_1.push(PlayerOData)
            setArray_X_1(array_x_1)
            console.log(array_x_1)
            
            
-        }else if(!isPlayerX){
+        }else if(isPlayerX){
            e.target.textContent = PlayerXData
            array_x_1[3] = PlayerXData
-            //array_x_1.push(PlayerXData)
            setArray_X_1(array_x_1)
            console.log(array_x_1)
         }
@@ -194,18 +187,16 @@ const GameArea = () => {
 
          console.log(e.target.value)
 
-         if(!isPlayerO){
+         if(isPlayerO){
             e.target.textContent = PlayerOData
             array_x_1[4] = PlayerOData
-            //array_x_1.push(PlayerOData)
             setArray_X_1(array_x_1)
             console.log(array_x_1)
             
             
-         }else if(!isPlayerX){
+         }else if(isPlayerX){
             e.target.textContent = PlayerXData
             array_x_1[4] = PlayerXData
-            //array_x_1.push(PlayerXData)
             setArray_X_1(array_x_1)
             console.log(array_x_1)
             
@@ -223,17 +214,15 @@ const GameArea = () => {
 
         console.log(e.target.value)
 
-        if(!isPlayerO){
+        if(isPlayerO){
            e.target.textContent = PlayerOData
            array_x_1[5] = PlayerOData
-            //array_x_1.push(PlayerOData)
            setArray_X_1(array_x_1)
            console.log(array_x_1)
            
-        }else if(!isPlayerX){
+        }else if(isPlayerX){
            e.target.textContent = PlayerXData
            array_x_1[5] = PlayerXData
-            //array_x_1.push(PlayerXData)
            setArray_X_1(array_x_1)
            console.log(array_x_1)
            
@@ -252,13 +241,13 @@ const GameArea = () => {
 
          console.log(e.target.value)
 
-         if(!isPlayerO){
+         if(isPlayerO){
             e.target.textContent = PlayerOData
             array_x_1[6] = PlayerOData
             setArray_X_1(array_x_1)
             console.log(array_x_1)
             
-         }else if(!isPlayerX){
+         }else if(isPlayerX){
             e.target.textContent = PlayerXData
             array_x_1[6] = PlayerXData
             setArray_X_1(array_x_1)
@@ -278,13 +267,13 @@ const GameArea = () => {
 
         console.log(e.target.value)
 
-        if(!isPlayerO){
+        if(isPlayerO){
            e.target.textContent = PlayerOData
            array_x_1[7] = PlayerOData
            setArray_X_1(array_x_1)
            console.log(array_x_1)
            
-        }else if(!isPlayerX){
+        }else if(isPlayerX){
            e.target.textContent = PlayerXData
            array_x_1[7] = PlayerXData
            setArray_X_1(array_x_1)
@@ -304,16 +293,15 @@ const GameArea = () => {
 
          console.log(e.target.value)
 
-         if(!isPlayerO){
+         if(isPlayerO){
             e.target.textContent = PlayerOData
             array_x_1[8] = PlayerOData
             setArray_X_1(array_x_1)
             console.log(array_x_1)
             
-         }else if(!isPlayerX){
+         }else if(isPlayerX){
             e.target.textContent = PlayerXData
             array_x_1[8] = PlayerXData
-            //array_x_1.push(PlayerXData)
             setArray_X_1(array_x_1)
             console.log(array_x_1)
          }
@@ -504,16 +492,7 @@ const GameArea = () => {
 
       }
       
-      else if(array_x_1[0] == "O" && array_x_1[1] == "O" && array_x_1[2] == "X" || array_x_1[0] == "O" && array_x_1[3] == "O" && array_x_1[6] == "X"
-      || array_x_1[1] == "O" && array_x_1[4] == "O" && array_x_1[7] == "X" || array_x_1[3] == "O" && array_x_1[4] == "O" && array_x_1[5] == "X"
-      || array_x_1[2] == "O" && array_x_1[5] == "O" && array_x_1[8] == "X" || array_x_1[0] == "O" && array_x_1[4] == "O" && array_x_1[8] == "X"
-      || array_x_1[2] == "O" && array_x_1[4] == "O" && array_x_1[6] == "X" || array_x_1[6] == "O" && array_x_1[7] == "O" && array_x_1[8] == "X"
       
-      ){
-         console.log("Match Drawn at 1,2,3 Pattern")
-         setMarkingStatus("Match Drawn")
-         
-      }
 
 
    }
