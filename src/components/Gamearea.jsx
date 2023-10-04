@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './Gamearea.css'
 
 const GameArea = () => {
@@ -9,7 +9,12 @@ const GameArea = () => {
     const [PlayerOData, setPlayerOData] = useState("O")
     const [PlayerXData, setPlayerXData] = useState("X")
 
-    const [array_x_1, setArray_X_1] = useState([])
+    const [playing_array, setPlayingArray] = useState([
+      "","","",
+      "","","",
+      "","",""
+    ])
+
     const [move_status, setMoveStatus] = useState("Let's Start Moving")
     const [marking_status, setMarkingStatus] = useState("")
 
@@ -63,9 +68,9 @@ const GameArea = () => {
 
          if(isPlayerO){
             e.target.textContent = PlayerOData
-            array_x_1[0] = PlayerOData
-            setArray_X_1(array_x_1)
-            console.log(array_x_1)
+            playing_array[0] = PlayerOData
+            playing_array(playing_array)
+            console.log(playing_array)
             setMoveStatus("Player X Move")
             
             
@@ -73,9 +78,9 @@ const GameArea = () => {
          }else if(isPlayerX){
             e.target.textContent = PlayerXData
             
-            array_x_1[0] = PlayerXData
-            setArray_X_1(array_x_1)
-            console.log(array_x_1)
+            playing_array[0] = PlayerXData
+            setPlayingArray(playing_array)
+            console.log(playing_array)
             setMoveStatus("Player O Move")
 
             
@@ -100,17 +105,17 @@ const GameArea = () => {
 
         if(isPlayerO){
            e.target.textContent = PlayerOData
-           array_x_1[1] = PlayerOData
-           setArray_X_1(array_x_1)
-           console.log(array_x_1)
+           playing_array[1] = PlayerOData
+           setPlayingArray(playing_array)
+           console.log(playing_array)
            setMoveStatus("Player X Move")
 
            
         }else if(isPlayerX){
            e.target.textContent = PlayerXData
-           array_x_1[1] = PlayerXData
-           setArray_X_1(array_x_1)
-           console.log(array_x_1)
+           playing_array[1] = PlayerXData
+           setPlayingArray(playing_array)
+           console.log(playing_array)
            setMoveStatus("Player O Move")
            
         }
@@ -133,17 +138,17 @@ const GameArea = () => {
 
          if(isPlayerO){
             e.target.textContent = PlayerOData
-            array_x_1[2] = PlayerOData
-            setArray_X_1(array_x_1)
-            console.log(array_x_1)
+            playing_array[2] = PlayerOData
+            setPlayingArray(playing_array)
+            console.log(playing_array)
             setMoveStatus("Player X Move")
             
             
          }else if(isPlayerX){
             e.target.textContent = PlayerXData
-            array_x_1[2] = PlayerXData
-            setArray_X_1(array_x_1)
-            console.log(array_x_1)
+            playing_array[2] = PlayerXData
+            setPlayingArray(playing_array)
+            console.log(playing_array)
             setMoveStatus("Player O Move")
          }
 
@@ -163,16 +168,20 @@ const GameArea = () => {
 
         if(isPlayerO){
            e.target.textContent = PlayerOData
-           array_x_1[3] = PlayerOData
-           setArray_X_1(array_x_1)
-           console.log(array_x_1)
+           playing_array[3] = PlayerOData
+           setPlayingArray(playing_array)
+           console.log(playing_array)
+           setMoveStatus("Player X Move")
+
            
            
         }else if(isPlayerX){
            e.target.textContent = PlayerXData
-           array_x_1[3] = PlayerXData
-           setArray_X_1(array_x_1)
-           console.log(array_x_1)
+           playing_array[3] = PlayerXData
+           setPlayingArray(playing_array)
+           console.log(playing_array)
+           setMoveStatus("Player O Move")
+
         }
 
 
@@ -189,16 +198,18 @@ const GameArea = () => {
 
          if(isPlayerO){
             e.target.textContent = PlayerOData
-            array_x_1[4] = PlayerOData
-            setArray_X_1(array_x_1)
-            console.log(array_x_1)
+            playing_array[4] = PlayerOData
+            setPlayingArray(playing_array)
+            console.log(playing_array)
+            setMoveStatus("Player X Move")
             
             
          }else if(isPlayerX){
             e.target.textContent = PlayerXData
-            array_x_1[4] = PlayerXData
-            setArray_X_1(array_x_1)
-            console.log(array_x_1)
+            playing_array[4] = PlayerXData
+            setPlayingArray(playing_array)
+            console.log(playing_array)
+            setMoveStatus("Player O Move")
             
          }
 
@@ -216,15 +227,17 @@ const GameArea = () => {
 
         if(isPlayerO){
            e.target.textContent = PlayerOData
-           array_x_1[5] = PlayerOData
-           setArray_X_1(array_x_1)
-           console.log(array_x_1)
+           playing_array[5] = PlayerOData
+           setPlayingArray(playing_array)
+           console.log(playing_array)
+           setMoveStatus("Player X Move")
            
         }else if(isPlayerX){
            e.target.textContent = PlayerXData
-           array_x_1[5] = PlayerXData
-           setArray_X_1(array_x_1)
-           console.log(array_x_1)
+           playing_array[5] = PlayerXData
+           setPlayingArray(playing_array)
+           console.log(playing_array)
+           setMoveStatus("Player O Move")
            
         }
 
@@ -243,15 +256,19 @@ const GameArea = () => {
 
          if(isPlayerO){
             e.target.textContent = PlayerOData
-            array_x_1[6] = PlayerOData
-            setArray_X_1(array_x_1)
-            console.log(array_x_1)
+            playing_array[6] = PlayerOData
+            setPlayingArray(playing_array)
+            console.log(playing_array)
+            setMoveStatus("Player X Move")
+
             
          }else if(isPlayerX){
             e.target.textContent = PlayerXData
-            array_x_1[6] = PlayerXData
-            setArray_X_1(array_x_1)
-            console.log(array_x_1)
+            playing_array[6] = PlayerXData
+            setPlayingArray(playing_array)
+            console.log(playing_array)
+            setMoveStatus("Player O Move")
+
          }
 
 
@@ -269,15 +286,19 @@ const GameArea = () => {
 
         if(isPlayerO){
            e.target.textContent = PlayerOData
-           array_x_1[7] = PlayerOData
-           setArray_X_1(array_x_1)
-           console.log(array_x_1)
+           playing_array[7] = PlayerOData
+           setPlayingArray(playing_array)
+           console.log(playing_array)
+           setMoveStatus("Player X Move")
+
            
         }else if(isPlayerX){
            e.target.textContent = PlayerXData
-           array_x_1[7] = PlayerXData
-           setArray_X_1(array_x_1)
-           console.log(array_x_1)
+           playing_array[7] = PlayerXData
+           setPlayingArray(playing_array)
+           console.log(playing_array)
+           setMoveStatus("Player O Move")
+
         }
 
         answers_checking()
@@ -295,15 +316,19 @@ const GameArea = () => {
 
          if(isPlayerO){
             e.target.textContent = PlayerOData
-            array_x_1[8] = PlayerOData
-            setArray_X_1(array_x_1)
-            console.log(array_x_1)
+            playing_array[8] = PlayerOData
+            setPlayingArray(playing_array)
+            console.log(playing_array)
+            setMoveStatus("Player X Move")
+
             
          }else if(isPlayerX){
             e.target.textContent = PlayerXData
-            array_x_1[8] = PlayerXData
-            setArray_X_1(array_x_1)
-            console.log(array_x_1)
+            playing_array[8] = PlayerXData
+            setPlayingArray(playing_array)
+            console.log(playing_array)
+            setMoveStatus("Player O Move")
+
          }
 
          answers_checking()
@@ -316,180 +341,95 @@ const GameArea = () => {
       
       
       //match win patterns
-      if(array_x_1[0] == "X" && array_x_1[1] == "X" && array_x_1[2] == "X"){
-         
-         console.log("Player X won at 1,2,3 Pattern or 3,2,1 pattern or 2,1,3")
-         setMarkingStatus("Player X won..!!")
+      if (playing_array[0] == "X" && playing_array[1] == "X" && playing_array[2] == "X") {
+         setMarkingStatus("X Player has won!")
          setMarks_X(1)
-       
-         
-      }else if(array_x_1[0] == "O" && array_x_1[1] == "O" && array_x_1[2] == "O"){
-         
-         console.log("Player O won at 1,2,3 Pattern or 3,2,1 pattern or 2,1,3")
-         setMarkingStatus("Player O won..!!")
+      } 
+
+      else if(playing_array[0] == "O" && playing_array[1] == "O" && playing_array[2] == "O"){
+         setMarkingStatus('O Player has won!')
          setMarks_O(1)
       }
-      else if(array_x_1[0] == "X" && array_x_1[3] == "X" && array_x_1[6] == "X"){
-         
-         console.log("Player X won at 1,4,7 Pattern or 7,4,1 pattern or 4,1,7")
-         setMarkingStatus("Player X won..!!")
-         setMarks_X(1)
-         
-         
-      }
-      else if(array_x_1[0] == "O" && array_x_1[3] == "O" && array_x_1[6] == "O"){
-         
-         console.log("Player O won at 1,4,7 Pattern or 7,4,1 pattern or 4,1,7")
-         setMarkingStatus("Player O won..!!")
-         setMarks_O(1)
-         
-      }
-      else if(array_x_1[1] == "X" && array_x_1[4] == "X" && array_x_1[7] == "X"){
-         
-         console.log("Player X won at 2,5,8 Pattern or 8,5,2")
-         setMarkingStatus("Player X won..!!")
-         setMarks_X(1)
-         
-      }
-      else if(array_x_1[1] == "O" && array_x_1[4] == "O" && array_x_1[7] == "O"){
-         
-         console.log("Player O won at 2,5,8 Pattern or 8,5,2")
-         setMarkingStatus("Player O won..!!")
-         setMarks_O(1)
-
-         
-         
-      }
-      else if(array_x_1[3] == "X" && array_x_1[4] == "X" && array_x_1[5] == "X"){
-         
-         console.log("Player X won at 4,5,6 Pattern or 6,5,4 or 5,4,6 Pattern")
-         setMarkingStatus("Player X won..!!")
-         setMarks_X(1)
 
 
-         
-         
-      }else if(array_x_1[3] == "O" && array_x_1[4] == "O" && array_x_1[5] == "O"){
-         console.log("Player O won at 4,5,6 Pattern or 6,5,4 or 5,4,6 Pattern")
-         setMarkingStatus("Player O won..!!")
-         setMarks_O(1)
-
-         
-      }
-
-      else if(array_x_1[2] == "X" && array_x_1[5] == "X" && array_x_1[8] == "X"){
-         console.log("Player X won at 3,6,9 Pattern or 9,6,3 Pattern or 6,3,9 Pattern")
-         setMarkingStatus("Player X won..!!")
-         setMarks_X(1)
-
-
-
-      }else if(array_x_1[2] == "O" && array_x_1[5] == "O" && array_x_1[8] == "O"){
-         console.log("Player O won at 3,6,9 Pattern or 9,6,3 Pattern or 6,3,9 Pattern")
-         setMarkingStatus("Player O won..!!")
-         setMarks_O(1)
-
-      }
-
-      else if(array_x_1[0] == "X" && array_x_1[4] == "X" && array_x_1[8] == "X"){
-         console.log("Player X won at 1,5,9 Pattern or 9,5,1 Pattern or 5,1,9 Pattern")
-         setMarkingStatus("Player X won..!!")
-         setMarks_X(1)
-
-
-      }
-
-      else if(array_x_1[0] == "O" && array_x_1[4] == "O" && array_x_1[8] == "O"){
-         console.log("Player O won at 1,5,9 Pattern or 9,5,1 Pattern or 5,1,9 Pattern")
-         setMarkingStatus("Player O won..!!")
-         setMarks_O(1)
-
-      }
-
-      else if(array_x_1[2] == "X" && array_x_1[4] == "X" && array_x_1[6] == "X"){
-         console.log("Player X won at 3,5,7 Pattern or 7,5,3 Pattern or 5,3,7 Pattern")
-         setMarkingStatus("Player X won..!!")
+      else if(playing_array[1] == "X" && playing_array[4] == "X" && playing_array[7] == "X"){
+         setMarkingStatus("X Player has won!")
          setMarks_X(1)
       }
 
-      else if(array_x_1[2] == "O" && array_x_1[4] == "O" && array_x_1[6] == "O"){
-         console.log("Player O won at 3,5,7 Pattern or 7,5,3 Pattern or 5,3,7 Pattern")
-         setMarkingStatus("Player O won..!!")
+      else if(playing_array[1] == "O" && playing_array[4] == "O" && playing_array[7] == "O"){
+         setMarkingStatus('O Player has won!')
          setMarks_O(1)
-
       }
-
-      else if(array_x_1[6] == "X" && array_x_1[7] == "X" && array_x_1[8] == "X"){
-         console.log("Player X won at 7,8,9 Pattern or 9,8,7 Pattern or 8,7,9 Pattern")
-         setMarkingStatus("Player X won..!!")
+      else if(playing_array[0] == "X" && playing_array[4] == "X" && playing_array[8] == "X"){
+         setMarkingStatus("X Player has won!")
          setMarks_X(1)
       }
 
-      else if(array_x_1[6] == "O" && array_x_1[7] == "O" && array_x_1[8] == "O"){
-         console.log("Player O won at 7,8,9 Pattern or 9,8,7 Pattern or 8,7,9 Pattern")
-         setMarkingStatus("Player O won..!!")
+      else if(playing_array[0] == "O" && playing_array[4] == "O" && playing_array[8] == "O"){
+         setMarkingStatus('O Player has won!')
          setMarks_O(1)
+      }
 
+      else if(playing_array[0] == "X" && playing_array[3] == "X" && playing_array[6] == "X"){
+         setMarkingStatus("X Player has won!")
+         setMarks_X(1)
+      }
+
+      else if(playing_array[0] == "O" && playing_array[3] == "O" && playing_array[6] == "O"){
+         setMarkingStatus("O Player has won!")
+         setMarks_O(1)
+      }
+
+      else if(playing_array[3] == "X" && playing_array[4] == "X" && playing_array[5] == "X"){
+         setMarkingStatus("X Player has won!")
+         setMarks_X(1)
+      }
+
+      else if(playing_array[3] == "O" && playing_array[4] == "O" && playing_array[5] == "O"){
+         setMarkingStatus("O Player has won!")
+         setMarks_O(1)
+      }
+
+      else if(playing_array[2] == "X" && playing_array[5] == "X" && playing_array[8] == "X"){
+         setMarkingStatus("X Player has won!")
+         setMarks_X(1)
       }
 
 
-      //match draw patterns (1,2,3)
-      if(array_x_1[0] == "X" && array_x_1[1] == "O" && array_x_1[2] == "X" || array_x_1[0] == "X" && array_x_1[3] == "O" && array_x_1[6] == "X"
-      || array_x_1[1] == "X" && array_x_1[4] == "O" && array_x_1[7] == "X" || array_x_1[3] == "X" && array_x_1[4] == "O" && array_x_1[5] == "X"
-      || array_x_1[2] == "X" && array_x_1[5] == "O" && array_x_1[8] == "X" || array_x_1[0] == "X" && array_x_1[4] == "O" && array_x_1[8] == "X"
-      || array_x_1[2] == "X" && array_x_1[4] == "O" && array_x_1[6] == "X" || array_x_1[6] == "X" && array_x_1[7] == "O" && array_x_1[8] == "X"
+      else if(playing_array[2] == "O" && playing_array[5] == "O" && playing_array[8] == "O"){
+         setMarkingStatus("O Player has won!")
+         setMarks_O(1)
+      }
+      else if(playing_array[2] == "X" && playing_array[4] == "X" && playing_array[6] == "X"){
+         setMarkingStatus("X Player has won!")
+         setMarks_X(1)
+      }
+
+      else if(playing_array[2] == "O" && playing_array[4] == "O" && playing_array[6] == "O"){
+         setMarkingStatus("O Player has won!")
+         setMarks_O(1)
+      }
+
+      else if(playing_array[6] == "X" && playing_array[7] == "X" && playing_array[8] == "X"){
+         setMarkingStatus("X Player has won!")
+         setMarks_X(1)
+      }
+
+      else if(playing_array[6] == "O" && playing_array[7] == "O" && playing_array[8] == "O"){
+         setMarkingStatus("O Player has won!")
+         setMarks_O(1)
+      }
       
-      ){
-         console.log("Match Drawn at 1,2,3 Pattern")
+      else if (!playing_array.includes("") && !playing_array.includes(undefined)) {
+         console.log("Match Draw");
          setMarkingStatus("Match Drawn")
-
-      }
-      
-      
-      else if(array_x_1[0] == "O" && array_x_1[1] == "X" && array_x_1[2] == "O" || array_x_1[0] == "O" && array_x_1[3] == "X" && array_x_1[6] == "O"
-      || array_x_1[1] == "O" && array_x_1[4] == "X" && array_x_1[7] == "O" || array_x_1[3] == "O" && array_x_1[4] == "X" && array_x_1[5] == "O"
-      || array_x_1[2] == "O" && array_x_1[5] == "X" && array_x_1[8] == "O" || array_x_1[0] == "O" && array_x_1[4] == "X" && array_x_1[8] == "O"
-      || array_x_1[2] == "O" && array_x_1[4] == "X" && array_x_1[6] == "O" || array_x_1[6] == "O" && array_x_1[7] == "X" && array_x_1[8] == "O"
-      
-      ){
-         console.log("Match Drawn at 1,2,3 Pattern")
-         setMarkingStatus("Match Drawn")
-
-      }
-      
-      
-      else if(array_x_1[0] == "X" && array_x_1[1] == "X" && array_x_1[2] == "O" || array_x_1[0] == "X" && array_x_1[3] == "X" && array_x_1[6] == "O"
-      || array_x_1[1] == "X" && array_x_1[4] == "X" && array_x_1[7] == "O" || array_x_1[3] == "X" && array_x_1[4] == "X" && array_x_1[5] == "O"
-      || array_x_1[2] == "X" && array_x_1[5] == "X" && array_x_1[8] == "O" || array_x_1[0] == "X" && array_x_1[4] == "X" && array_x_1[8] == "O"
-      || array_x_1[2] == "X" && array_x_1[4] == "X" && array_x_1[6] == "O" || array_x_1[6] == "X" && array_x_1[7] == "X" && array_x_1[8] == "O"
-      
-      ){
-         console.log("Match Drawn at 1,2,3 Pattern")
-         setMarkingStatus("Match Drawn")
-
-
-      }
-      
-      else if(array_x_1[0] == "O" && array_x_1[1] == "O" && array_x_1[2] == "X" || array_x_1[0] == "O" && array_x_1[3] == "O" && array_x_1[6] == "X"
-      || array_x_1[1] == "O" && array_x_1[4] == "O" && array_x_1[7] == "X" || array_x_1[3] == "O" && array_x_1[4] == "O" && array_x_1[5] == "X"
-      || array_x_1[2] == "O" && array_x_1[5] == "O" && array_x_1[8] == "X" || array_x_1[0] == "O" && array_x_1[4] == "O" && array_x_1[8] == "X"
-      || array_x_1[2] == "O" && array_x_1[4] == "O" && array_x_1[6] == "X" || array_x_1[6] == "O" && array_x_1[7] == "O" && array_x_1[8] == "X"
-      ){
-         console.log("Match Drawn at 1,2,3 Pattern")
-         setMarkingStatus("Match Drawn")
-
-
-      }
-      
-      else if(array_x_1[0] == "X" && array_x_1[1] == "O" && array_x_1[2] == "O" || array_x_1[0] == "X" && array_x_1[3] == "O" && array_x_1[6] == "O"
-      || array_x_1[1] == "X" && array_x_1[4] == "O" && array_x_1[7] == "O" || array_x_1[3] == "X" && array_x_1[4] == "O" && array_x_1[5] == "O"
-      || array_x_1[2] == "X" && array_x_1[5] == "O" && array_x_1[8] == "O" || array_x_1[0] == "X" && array_x_1[4] == "O" && array_x_1[8] == "O"
-      || array_x_1[2] == "X" && array_x_1[4] == "O" && array_x_1[6] == "O" || array_x_1[6] == "X" && array_x_1[7] == "O" && array_x_1[8] == "O"
-      ){
-         console.log("Match Drawn at 1,2,3 Pattern")
-         setMarkingStatus("Match Drawn")
-
-
+         setMarks_O(0)
+         setMarks_X(0)
+         
+      } else {
+         console.log("Not all boxes are filled yet.")
+         
       }
       
       
